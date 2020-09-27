@@ -1,0 +1,890 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --main-background-color: rgb(241, 241, 239); 
+    --main-font:sans-serif;
+    --navigation-font:sans-serif;
+    --question-font:Impact;    
+    --answer-font:monospace;
+    --sub-background-color:rgb(113, 134, 17);
+}
+
+
+body{
+    overflow-x: hidden;
+    background-color: var(--main-background-color);
+    z-index:10;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/*///////////////////////////////////////////index only start/////////////////////////////////////////////*/
+main:nth-child(n){
+    background-color: #1e1e1f;
+}
+
+section{
+    padding-top: 30px;
+    background-color: #1e1e1f;
+}
+.flag{
+    display: flex;
+    justify-content: center; 
+
+}
+
+.main-card{
+    width: 100%;
+    background-color: #37680f;
+    background: url("../images/background.jpg"); 
+    color: white; 
+    background-size: cover;
+    position: relative;         
+    margin-left: -10px; 
+    padding: 10px;   
+}
+
+
+.title-text{
+    color: white;
+    font-family: sans-serif; 
+    font-size: 3rem;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.simple-text{
+    position: absolute;
+    top: 20%;
+    
+}
+.descriptive-text{
+    color: white;   
+    font-family: sans-serif;
+    margin-top: 50px;
+    padding-left: 20px;
+    text-align: center;
+    width: 90%;
+
+}
+
+.slogan{
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 25px;
+    
+}
+.accounts{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    color: white;
+    bottom: 30px;
+}
+.sign-in-index,.create-account-index{
+    text-align: center;
+    border: 1.5px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 150px;  
+    font-size: 20px;         
+}
+.create-account-index{
+    right: 0px;
+}
+.sign-in-index:hover,.create-account-index:hover{
+    color: rgb(229, 255, 0);            
+    cursor: pointer;
+    box-shadow: 1px 1px 15px 2px white;
+}
+
+
+
+
+.question-and-answer{
+    text-align: center;
+    width: 90%;
+    padding: 5px;
+    background-color: #5478c4;
+    background: url("../images/thinking.jpg");
+    background-size: cover;
+    border: 2px solid #ce7582;
+    margin: 20px auto;
+    border-radius: 10px;
+
+}
+.question-ans-text{
+    font-size: 15px;
+    font-family: cursive;
+    line-height: 22px;
+}
+
+
+
+.question-ans-title{
+    font-size: 22px;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.some-intro,.founders-card{
+    width: 100%;
+    background-color: #1e1e1e;
+    color: white;
+
+}
+.some-intro-text{
+    font-family: cursive;
+    padding: 15px;
+}
+.some-intro-photo{
+    height: 150px;
+    width: 200px;
+    max-width: 70%;
+    max-height: 70%;
+    margin-left: 30%;
+}
+.some-intro-title,.founders-title{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.founders-card{
+    background-color: tomato;
+    padding: 18px 0px;
+}
+.founders-photo{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+}
+.founders-profile{
+    display: flex;
+    justify-content: space-around;
+}
+.founders-title{
+    padding: 5px;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+/*///////////////////////////////////////////index only end/////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////three bars start/////////////////////////////////////////////*/
+.three-bars{
+    display: none;
+}
+.three-bars {    
+    cursor: pointer;  
+    margin-right: 30px;  
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;    
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-8px, 6px) ;
+    box-shadow: 5px 2px 20px rgb(78, 41, 109) ;
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    box-shadow: 5px 2px 20px rgb(78, 41, 109) ;    
+
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-9px, -8px) ;
+  }
+  /*///////////////////////////////////////Three bars ended//////////////////////////////////////////////*/
+
+
+.navigation-container{
+    background-color: salmon;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    right: 0px;   
+}
+.intro-sign{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.9px 2px;
+}
+.sign-in-create{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.create-account,.sign-in{
+    background-color: rgba(19, 19, 134, 0.849);
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    border: 0.5px solid rgba(156, 145, 45, 0.74);
+}
+
+
+.circle-effect{
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    
+}
+
+.circle-effect::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 24px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(194, 66, 66);
+    z-index: -1;
+    transform: translateY(200px);
+    transition: 0.5s;
+}
+.circle-effect:hover{
+    background-color: red;
+}
+.circle-effect:hover:before{
+    transform: translateX(0px);
+    transform: translateY(-40px);
+}
+
+  /*///////////////////////////////////////PopUp started/////////////////////////////////////////*/
+
+.popup{
+    position: absolute;
+    left: -500px;
+}
+
+  /*///////////////////////////////////////PopUp ended//////////////////////////////////////////////*/
+
+
+
+nav{
+    height: 50px;
+    position: sticky;
+    top: 0px;   
+    z-index: 20; 
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    line-height: 25px;   
+    height: 50px; 
+}
+ .nav a li{
+     font-size: 17px;
+     font-family: var(--navigation-font);
+ }
+.nav  a{
+    text-align: center;
+    /*/////////////////////////////////////////////////////////*/
+    line-height: 50px;
+    background-color: purple;
+    padding:0px 10px;
+    overflow: hidden;
+    position: relative;
+}
+.nav a:hover{
+    background-color: rgb(95, 96, 102) !important;
+    color: black;
+}
+
+
+
+.nav a::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    height: 4px;
+    background-color: #fab906;
+    transform: translateY(-50px);
+}
+
+.nav a:hover:before{
+    transform: translateY(0px);
+}
+
+
+
+.user{
+    position: relative;
+    display: flex;
+    margin-left: 3px;
+}
+
+.user-pic{
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 50%;
+}
+.info{
+    display: grid;
+    margin-left: 3px;
+}
+.views{
+    font-size: 12px;
+    font-family: monospace;
+    margin-top: 10px;
+}
+.name{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: -4px;
+}
+
+
+
+
+.all-data{
+    background-color:#fff;
+}
+
+
+
+
+
+/*///////////////////////////////////////Related Things() Started//////////////////////////////////////////////*/
+
+
+.title-related-topic{
+    font-size: 25px;
+    margin-top: 10px;
+    padding-right: -5px;
+}
+.rel-topics li{
+    height: auto;
+    width: 100%;
+    padding: 13px 1px;
+    background-color: rgb(139, 119, 158);
+    border-bottom: 1px solid red;  
+    box-shadow: 2px 4px 10px black;  
+}
+
+.rel-topics a {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-family: 'Lucida Sans';
+    
+}
+.rel-topics a:hover{
+    color: white;
+}
+
+/*///////////////////////////////////////Related Things() ended//////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+.button { 
+    width: auto;
+    padding: 10px; 
+    border: none; 
+    border-radius: 5px; 
+    background: rgb(102,74,90);
+    background: linear-gradient(75deg, rgba(102,74,90,1) 17%, rgba(162,43,187,0.8855917366946778) 51%, rgba(102,74,90,1) 90%);
+    background: rgba(54, 112, 187, 0.466);
+    border: 2px solid rgb(35, 0, 100);
+
+    border-radius: 50px;
+    color: rgb(0, 0, 0); 
+    text-transform: uppercase;
+    font-size: 14px; 
+    outline: none; 
+    cursor: pointer; 
+    position: relative; 
+    overflow: hidden; 
+    z-index:0;
+    box-shadow: 6px 7px 40px -4px #000;
+             transition: 0.8s; 
+}
+.button:hover:before{
+    transform: translate(0);
+}
+.button::before{
+    content: "";
+    position: absolute;
+    top:0;
+    right: 0;
+    background-color: white;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    transform: translate(-100%);
+    transition: 0.3s linear;
+    z-index: -5;
+}
+.button:hover{
+    background-color:#000;
+    color: #fff;
+}
+
+.button span { 
+    position: absolute; 
+    border-radius: 50%; 
+    /* To make it round */
+    background-color: rgba(75, 3, 93,0.5); 
+
+    width: 100px; 
+    height: 100px; 
+    margin-top: -50px; 
+    /* for positioning */
+    margin-left: -50px; 
+
+    animation: ripple 2s;
+ 
+    opacity: 0; 
+} 
+
+/* Add animation */
+@keyframes ripple { 
+    from { 
+        opacity: 1; 
+        transform: scale(0); 
+    } 
+
+    to { 
+        opacity: 0; 
+        transform: scale(10); 
+    } 
+} 
+
+
+
+
+
+
+
+
+
+/*middle screen*/
+@media only screen and (max-width:857px) {
+    .discover-other{
+        display: none;
+    }
+  
+    .footer{
+        display: flex;
+        justify-content: space-around;
+    }
+    .location,.feedback,.foot-subtopic{
+        font-size: 13px;
+    }
+    .social-sites > div{
+        height: 1.1rem;
+        width: 1.1rem;
+        font-size: 1.1rem;
+    }
+}
+/*small screen started*/
+@media only screen and (max-width:637px) {
+    .three-bars{
+        display: block;
+    }
+    .navigation{
+        top: 50px;
+        position: absolute;
+        right: -500px;          
+        transition: 0.5s;
+    }
+    .navigation-toggle{
+        right: 0px;
+        height: 150vh;
+        background-color: purple;       
+    }
+    .nav{
+        display: grid;  
+        background-color: white;
+        height: auto;
+    }
+    .nav-total .nav a{
+        background-color: white;
+        color: black;
+    }
+    .nav-total .nav  a li{
+        color: black;
+    
+    }
+    .nav a {
+       padding-left: 50px;
+    }
+
+    main{
+        
+        display:grid;
+        grid-template-rows:1fr auto;
+    }
+    .accounts{
+        bottom: 0px;
+    }    
+    .slogan{
+        bottom:20px;
+    }
+    /*////////////////////////////////////////////Question and answer started/////////////////////////////*/
+.question-answer{
+    border-radius: 10px;
+    background-color: rgb(198, 229, 236);
+    padding: 10px;
+    width: 80%;
+    margin: 10px;
+
+}
+.question{
+    display: grid;
+    grid-auto-flow: dense;
+  
+}
+.question-user{
+    display: grid;
+}
+.question-user-bio,.answer-user-bio{
+    margin:-5px;
+    font-weight: bold;
+
+}
+.question-user-photo,.answer-user-photo{
+    height: 40px;
+     width: 40px;
+     border-radius: 50%;
+     background-color: rgba(48, 48, 133, 0.658);
+     position: relative;
+}
+.user-picture{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.question-date,.answer-answered-date{
+    font-size: 13px;
+    margin-left: -3px;
+}
+.quest{
+    font-size: 1.5rem;
+}
+.ans-text{
+    margin-top: 10px;
+    font-family: var(--main-font);
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+
+.ans{
+    font-family: var(--answer-font);
+    font-size: 1.2rem;
+    word-wrap: break-word;
+    line-height: 17px;
+}
+
+.question-answer{
+    margin-bottom: 50px;
+}
+
+/*////////////////////////////////////////////Question and answer ended/////////////////////////////*/
+
+
+    .discover-other{
+        display: none;
+    }
+main{
+    width: 100%;
+}
+
+    .related-topics{
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer{
+        display: grid;
+        padding-left: 10px;
+    }
+
+}
+@media only screen and (min-width:637px) {
+    .footer{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+}
+/*big screen*/
+@media only screen and (min-width:857px) {
+.nav a{
+    width: 120px;
+}
+
+.related-topics,.discover-other{
+    width: 20vw;
+}
+.answer-user{
+    margin-left: 80%;
+}
+/*////////////////////////////////////////////Question and answer started/////////////////////////////*/
+.question-answer{
+    border-radius: 20px;
+    background-color: rgb(198, 229, 236);
+    padding: 10px;
+    width: 90%;
+    margin: 10px auto;
+}
+.question{
+    display: flex;
+  
+}
+.question-user{
+    display: grid;
+}
+.question-user-bio,.answer-user-bio{
+    margin:-5px;
+    font-weight: bold;
+
+}
+.question-user-photo,.answer-user-photo{
+    height: 52px;
+     width: 52px;
+     border-radius: 50%;
+     background-color: rgba(48, 48, 133, 0.658);
+     position: relative;
+}
+.user-picture{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.question-date,.answer-answered-date{
+    font-size: 13px;
+    margin-left: -3px;
+}
+.quest{
+    font-size: 25px;
+}
+.ans-text{
+    margin-top: 10px;
+    font-family: var(--main-font);
+    font-size: 26px;
+}
+
+.ans{
+    font-family: var(--answer-font);
+    font-size: 1.2rem;
+}
+
+.question-answer{
+    margin-bottom: 50px;
+}
+
+/*////////////////////////////////////////////Question and answer ended/////////////////////////////*/
+
+
+
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .location,.feedback,.foot-subtopic{
+        font-size: 13px;
+    }
+    .social-sites > div{
+        height: 1.1rem;
+        width: 1.1rem;
+        font-size: 1.1rem;
+    }
+    ::-webkit-scrollbar{
+        width: 10px;
+        background-color: white;
+    }
+    ::-webkit-scrollbar-thumb{        
+background: rgb(150,38,205);
+background: -moz-linear-gradient(274deg, rgba(150,38,205,1) 4%, rgba(13,140,184,1) 55%, rgba(126,16,193,1) 98%);
+background: -webkit-linear-gradient(274deg, rgba(150,38,205,1) 4%, rgba(13,140,184,1) 55%, rgba(126,16,193,1) 98%);
+background: linear-gradient(274deg, rgba(150,38,205,1) 4%, rgba(13,140,184,1) 55%, rgba(126,16,193,1) 98%);
+
+    }
+
+  main:nth-child(n){
+      background-color: white;
+  }
+
+    .main-card{
+        width: 100%;
+        background-color: #37680f;
+        background: url("../images/background.jpg"); 
+        color: white; 
+        background-size: cover;
+        position: relative; 
+        padding-left: 10px;    
+        margin-left: -10px;    
+    }
+    
+
+    main:nth-child(1){
+        width:100vw !important;
+        height: 100vh !important;  
+ 
+    }
+
+
+    .other-text{
+        position: relative;
+    }
+
+    .accounts{
+        bottom: 20px;
+    }
+
+    .card{
+        width: 70%;
+        margin: 0px auto;
+        padding: 10px;
+    }
+    section{
+        padding-bottom: 30px;
+    }
+    .title-text{
+        margin-left: 30%;
+        }
+
+    .descriptive-text{
+        margin: 20px auto;
+        width: 60%;
+    }
+
+
+
+}
+
+
+
+.footer{
+    background-color: #1e1e1e;
+    bottom: 0px;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    
+}
+.social-sites{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+}
+.social-sites > div{
+    background-color: gray;
+    height: 1.3rem;
+    width: 1.3rem;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.3rem;
+    margin: 5px;
+}
+.location,.feedback{
+    color: green;
+}
+.location > i,.feedback > i{
+    margin-right: 7px;
+}
+
+.foot-topic{
+    text-transform: capitalize;
+    color: green;
+    font-size: 20px;
+    font-family: monospace;
+    margin: 5px 5px;
+    padding-bottom: 15px;
+}
+
+.info-block{
+    display: grid;
+    row-gap: 5px;
+    text-align: center;
+}
+.footer{
+    display: grid;
+}
+
+
+.location,.feedback{
+    font-size: 15px;
+    
+
+}
+.foot-subtopic{
+    font-size: 15px;
+    line-height: 25px;
+    font-family: monospace;
+    margin-bottom: 15px;
+}
+.foot-topic{
+    margin-bottom: -10px;
+    font-weight: 600;
+}
+
+.foot-subtopic,.foot-topic{
+    margin-left: -70px;
+}
+
+
+.copyright{
+    font-size: 18px;
+    background-color: green;
+    color:white;
+    padding:10px;
+    width: 100%;
+    height: auto;   
+    text-align: left;
+}
+
+
+
