@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: sansita;
+  src: url("./fonts/sansita.ttf");
+}
+
+@font-face {
+  font-family: worksans-question;
+  src: url("./fonts/worksans.ttf");
+}
+
+body {
+  background-color: #f0f2f5;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 34px;
+}
+.user-information {
+  display: grid;
+  border-top: 2px solid rgb(72, 140, 143);
+  border-bottom: 2px solid rgb(72, 140, 143);
+  padding: 5px 10px;
+}
+
+.basic-details {
+  display: flex;
+}
+.other-information {
+  display: flex;
+}
+.other-information > div {
+  margin: 0px 20px;
+}
+
+.username {
+  margin-bottom: -13px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.username:hover {
+  text-decoration: underline;
+  text-decoration-color: lightcoral;
+}
+.question-date {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: monospace;
+}
+.other-user-information {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.user {
+  background-color: beige;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.follow-user {
+  padding: 2px 7px;
+  background-color: white;
+  border: 2px solid rgb(127, 70, 173);
+  color: rgb(127, 70, 173);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.follow-user:hover {
+  color: white;
+  transition: 0.4s;
+  background-color: rgb(165, 113, 207);
+  box-shadow: 3px 3px 5px rgb(204, 119, 119);
+}
+
+.question {
+  font-family: worksans-question;
+  padding: 9px 6px;
+}
+
+.question-status {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.question-answer {
+  line-height: 28px;
+  font-weight: 50;
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+.question-tag {
+  cursor: pointer;
+  background-color: lightcoral;
+  padding: 7px 10px;
+  border-radius: 5px;
+}
+.question-tags {
+  padding: 16px;
+}
+.question-tag:hover {
+  background-color: rgb(212, 178, 178);
+}
+
+/*font awesome icons stylings*/
+.fa-share-alt {
+  color: rgb(49, 49, 138);
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.fa-share-alt:hover {
+  color: rgb(73, 73, 151);
+}
+
+.more-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin: 10px 0px;
+  padding: 10px;
+}
+.more-title {
+  padding-bottom: 6px;
+  text-align: center;
+  font-family: sansita, sans-serif;
+  font-size: 30px;
+  border-bottom: 3px solid rgb(184, 61, 61);
+}
+.more-image {
+  height: 70px;
+  width: 70px;
+  cursor: zoom-in;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.more-image:hover {
+  transform: scale(1.5);
+}
+
+.more-item-title {
+  color: black;
+  font-weight: 550;
+  word-break: normal;
+  cursor: default;
+}
+.more-item-title:hover {
+  color: rgb(41, 33, 33);
+}
+
+.more-main-writer-topic a:nth-child(1) {
+  color: rgb(119, 145, 5);
+  text-decoration: none;
+}
+.more-main-writer-topic a:nth-child(2) {
+  color: rgb(56, 68, 4);
+  text-decoration: none;
+}
+
+.more-front-part {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+/*sign in*/
+
+@media only screen and (max-width: 640px) {
+  .question-answer {
+    font-size: 18px;
+  }
+  .answer,
+  .more-from-onestep,
+  .question-tags {
+    padding: 16px;
+  }
+  .more-front-part {
+    line-height: 20px;
+  }
+  .more-main-writer-topic {
+    font-size: 13px;
+  }
+  .more-item-title {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .main-data {
+    width: 70%;
+    margin-left: 15%;
+  }
+  .more-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .more-item {
+    margin-right: 10px;
+  }
+  .question-answer {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (min-width: 520px) {
+  .main-data {
+    width: 86%;
+    margin-left: 7%;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .main-data {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .main-data {
+    width: 76%;
+    margin-left: 12%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .more-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .main-data {
+    width: 60%;
+    margin-left: 20%;
+  }
+  .more-item {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./base.css" rel="stylesheet" />
+    <title>notes</title>
+  </head>
+  <body>
+    <div class="main-data">
+      <div class="question-answer">
+        <h1 class="question">
+          How recursion really works in many programming languages
+        </h1>
+        <div class="user-information">
+          <div class="basic-details">
+            <div class="user-photo">
+              <img src="./images/user.jpg" class="user" alt="user" />
+            </div>
+            <div class="other-user-information">
+              <div class="username">Bill Gates</div>
+              <div class="question-date">2020-nov-13 1:34pm</div>
+            </div>
+          </div>
+
+          <div class="other-information">
+            <div class="follow-user">
+              Follow
+              <i class="fa fa-user-plus" aria-hidden="true"></i>
+            </div>
+            <div class="question-status">100 views</div>
+            <div class="share-question">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="answer">
+          Recursion — according to Wikipedia — is: “something that occurs when a
+          thing is defined in terms of itself or of its type” A nice visual
+          example of recursion is when you look at your screen while sharing it
+          via VNC, like in this example: Image for post Image for post in which
+          there’s your desktop containing a window showing your desktop
+          containing a window showing your desktop, and so on… In Computer
+          Science, recursion is the act of calling a function from itself and,
+          though is not very efficient, I find it one of the most elegant
+          programming techniques. In this article we’ll see a lot of examples
+          and try to understand the patterns behind recursive algorithms.
+          Looping over a list Let’s start with a linked list; if we want to loop
+          all the nodes of the list we can either go with a loop (a for or a
+          while) or we can use recursion. More specifically, we can define a
+          function that given as a parameter a node of the list, it calls itself
+          with the following node as a parameter, like in this example:
+          Recursively looping over a linked list What’s happening here is quite
+          simple: if we call this function with the head of the list (the first
+          node of the list), it will first check if that node exists; if true,
+          it will print the value of the node and then it will call itself with
+          the following node as the parameter and restarts the execution of the
+          function. And so on, until it arrives to the end of the list, where a
+          node doesn’t have any more following nodes. The structure of a
+          recursive function is composed of two parts: a base case (to finish
+          recursion) a recursive case (where the function calls itself) In the
+          code above we commented as // base case the if condition at the
+          beginning of the function: it contains the condition upon which the
+          function has to stop; without a base case the function might call
+          itself indefinitely, usually until it hits a stack overflow. The rest
+          of code following the if statement is the recursive part, the one that
+          contains the recursive call and that specifies with which parameters
+          the function has to call itself. Let’s get back to the code. If we
+          declared these nodes: then the loop() function will output — as
+          expected — these values: Node 1 Node 2 Node 3 But what if we change
+          the position of the println() statement? What happens if we move it
+          after the loop() call, like in this sample: A digression on execution
+          stack Before analyzing what happens with this change, let’s make a
+          digression on a thing called execution stack (also known as call
+          stack). From Wikipedia: “a call stack is a stack data structure that
+          stores information about the active subroutines of a computer program”
+          so, if the computer is currently executing function A and inside this
+          function there’s a call to function B, when it executes the call to
+          function B it will save in a data structure the point where it has to
+          return when function B will end, together with the current value of
+          the variables of function A; this data structure is saved into a stack
+          and then the execution will jump into function B; when the execution
+          of function B ends, the info contained in the stack will be popped, so
+          that the execution can jump back to the proper point in function A
+          restoring all the values of the variables, and it then restarts
+          executing function A, just after the call to function B. With
+          recursive functions the principle is the same: every time a function
+          calls itself, it stores the point where it had to come back after the
+          call and the values of the variables: the only difference is that the
+          point to go to after the call is inside the function itself. The use
+          of a stack for storing that info also explains why having a base case
+          is so important: the stack has a limited size and if we call the
+          recursive function too many times, there won’t be space anymore where
+          to store the info, thus generating the infamous Stack Overflow error.
+          Let’s get back to our example, in which we moved the println()
+          statement from before to after the recursive call. We first call the
+          loop() function with recursion.
+        </div>
+      </div>
+      <div class="question-tags">
+        <span class="question-tag">programming</span>
+        <span class="question-tag">lopps</span>
+        <span class="question-tag">computer</span>
+        <span class="question-tag">learn</span>
+      </div>
+    </div>
+
+    <div class="more-from-onestep">
+      <div class="more-title">Explore more in onestepnepal</div>
+      <div class="more-items">
+        <div class="more-item">
+          <div class="more-front-part">
+            <div class="more-item-title">
+              7 Great Reasons Why You Should Learn to Code
+            </div>
+            <div class="more-main-writer-topic">
+              <a href="">username</a> in <a href="">c++ in programming</a>
+            </div>
+          </div>
+          <div class="more-item-image">
+            <!--fill specific details-->
+            <img src="./images/topic.jpg" class="more-image" alt="main image" />
+          </div>
+        </div>
+
+        <div class="more-item">
+          <div class="more-front-part">
+            <div class="more-item-title">
+              7 Great Reasons Why You Should Learn to Code
+            </div>
+            <div class="more-main-writer-topic">
+              <a href="">username</a> in <a href="">c++ in programming</a>
+            </div>
+          </div>
+          <div class="more-item-image">
+            <!--fill specific details-->
+            <img src="./images/topic.jpg" class="more-image" alt="main image" />
+          </div>
+        </div>
+
+        <div class="more-item">
+          <div class="more-front-part">
+            <div class="more-item-title">
+              7 Great Reasons Why You Should Learn to Code
+            </div>
+            <div class="more-main-writer-topic">
+              <a href="">username</a> in <a href="">c++ in programming</a>
+            </div>
+          </div>
+          <div class="more-item-image">
+            <!--fill specific details-->
+            <img src="./images/topic.jpg" class="more-image" alt="main image" />
+          </div>
+        </div>
+
+        <div class="more-item">
+          <div class="more-front-part">
+            <div class="more-item-title">Use of AI in todays world</div>
+            <div class="more-main-writer-topic">
+              <a href="">noman</a> in <a href="">AI and ML</a>
+            </div>
+          </div>
+          <div class="more-item-image">
+            <!--fill specific details-->
+            <img src="./images/topic.jpg" class="more-image" alt="main image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://use.fontawesome.com/299edf00a0.js"></script>
+  </body>
+</html>
