@@ -1,2 +1,2 @@
 # one-simple-step
-Wow
+The official release of one-step-nepal(site)
